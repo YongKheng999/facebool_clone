@@ -13,16 +13,17 @@ class Post extends Model
     protected $fillable = [
         'caption',
         'image',
+        'user_id'
     ];
 
     public function user(){
-        return $this->belongTo(User::class);
+        return $this->belongsTo(User::class);
     }
 
     public function comments(){
         return $this->hasMany(Comment::class);
     }
-    public function like()
+    public function likes()
     {
         return $this->hasMany(Like::class);
     }

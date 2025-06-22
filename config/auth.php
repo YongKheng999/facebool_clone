@@ -35,16 +35,28 @@ return [
     |
     */
 
+    // 'guards' => [
+    //     'web' => [
+    //         'driver' => 'session',
+    //         'provider' => 'users',
+    //     ],
+    //     'api' => [
+    //         'driver'	=> 'passport',
+    //         'provider' => 'users',
+    //         ],
+    // ],
     'guards' => [
         'web' => [
             'driver' => 'session',
             'provider' => 'users',
         ],
+
         'api' => [
-            'driver'	=> 'passport',
+            'driver' => 'sanctum', // 🔁 if you want to keep using `auth:api`, you can set this
             'provider' => 'users',
-            ],
+        ],
     ],
+
 
     /*
     |--------------------------------------------------------------------------
